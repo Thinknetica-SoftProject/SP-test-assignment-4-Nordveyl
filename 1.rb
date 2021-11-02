@@ -15,7 +15,10 @@
 #
 #
 ## Решение:
-
-
+file = File.open('data/1.txt')
+a = IO.read(file)
+up = a.count '('
+down = a.count ')'
+puts up-down
 
 
