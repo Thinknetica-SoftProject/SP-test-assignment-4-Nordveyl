@@ -19,9 +19,7 @@ summa = 0
 file = File.open("data/4.txt")
 IO.foreach(file) do |line|
 	mas = line.split('x').map { |n| n.to_i }.sort
-	ploshad = 2 * (mas [0] * mas[2] + mas [0] * mas[1] + mas [1] * mas[2] ) + mas [0] * mas[1]
-	print mas
-	puts ploshad
+	ploshad = 2 * (mas [0] * mas[2] + mas [0] * mas[1] + mas [1] * mas[2] ) + mas [0] * mas[1] 
 	summa += ploshad
 	mas.clear
 end 
