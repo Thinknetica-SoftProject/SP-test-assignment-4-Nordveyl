@@ -15,4 +15,30 @@
 #
 #
 ## Решение:
+require 'digest'
+s = gets.chomp
+md5 = Digest::MD5.new 
+i = 0 
+loop do 
+	md5.update s + i.to_s 
+	if md5.hexdigest[0...5] == '00000'
+		puts i
+		break 
+	end
+	md5.reset  
+	i += 1
+end
+	
+
+#loop do 
+#k+=1
+#k.to_s
+#s = s + k 
+#md5.update s
+#if md5[0..4] = '00000'
+#	break 
+#else 
+#	s = s - k
+#end	
+#end
 
